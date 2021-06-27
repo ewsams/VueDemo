@@ -67,14 +67,14 @@
 
     <div class="mt-3">
     <label for="contact-preference">When is the best time of day to reach you?</label>
-    <div class="radio">
+    <div class="checkbox">
       <label>
-        <input  v-model="form.amSelected" type="radio" name="contact-preference" id="contact-preference" value="am" checked>Morning
+        <input  class="check-space" v-model="form.amSelected" type="checkbox" name="contact-preference" id="contact-preference" value="" checked>Morning
       </label>
     </div>
-    <div class="radio">
+    <div class="checkbox">
       <label>
-        <input v-model="form.pmSelected" type="radio" name="contact-preference" id="contact-preference" value="pm" checked>Evening
+        <input class="check-space" v-model="form.pmSelected" type="checkbox" name="contact-preference" id="contact-preference" value="" checked>Evening
       </label>
     </div>
 
@@ -82,7 +82,7 @@
     <div class="checkbox">
 
       <label>
-        <input v-model="form.newsSelected" type="checkbox" value="Sure!" id="newsletter"> Sure!
+        <input class="check-space" v-model="form.newsSelected" type="checkbox" value="Sure!" id="newsletter"> Sure!
       </label>
     </div>
 
@@ -111,25 +111,29 @@
         pmSelected:false,
         newsSelected:false 
         });
-    const onSubmit = async () => {
-      await createUser({ ...form })
-    form.first;
-    form.last;
-    form.company;
-    form.phone;
-    form.email;
-    form.url;
-    form.amSelected;
-    form.pmSelected;
-    form.newsSelected;
-    }
-    return { form, onSubmit }
-  }
-};
+        const onSubmit = async () => {
+        await createUser({ ...form })
+        form.first;
+        form.last;
+        form.company;
+        form.phone;
+        form.email;
+        form.url;
+        form.amSelected;
+        form.pmSelected;
+        form.newsSelected;
+        }
+        return { form, onSubmit }
+        }
+    };
 </script>
 
 <style scoped>
 h2,label{
      font-family: 'Dela Gothic One';
+}
+
+.check-space{
+  margin-right: 6px;
 }
 </style>

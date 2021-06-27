@@ -11,12 +11,18 @@
             </div> 
         </div>   
     </div>
+    <PotentialClients/>
 </template>
 
 
 <script>
+import PotentialClients from '@/components/PotentialClients.vue'
+
 export default {
     name: 'Landing',
+    components:{
+        PotentialClients
+    },
     props: {
        msg:String
    }
