@@ -13,7 +13,6 @@ const routes = [
     path: '/create-user',
     name: 'CreateUser',
     component: CreateUser,
-    props:{msg:'Edward Sams Vue Demo'}
   }
 ]
 
